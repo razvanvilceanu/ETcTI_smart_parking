@@ -13,9 +13,9 @@ r = cv2.selectROIs('whatever', img, showCrosshair=False, fromCenter=False)
 rlist.append(r)
 print(rlist)
 
-# with open('data/rois.csv','w', newline='') as outf:
-#   csvw = csv.writer(outf)
-#   csvw.writerows(rlist)
+with open('data/rois.csv', 'w', newline='') as outf:
+  csvw = csv.writer(outf)
+  csvw.writerows(rlist)
 
 cap.release()
 cv2.destroyAllWindows()
