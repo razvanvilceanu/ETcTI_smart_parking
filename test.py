@@ -1,8 +1,5 @@
-import msvcrt
+from functools import reduce
 
-while 1:
-    print ('Testing..')
-    # body of the loop ...
-    if msvcrt.kbhit():
-	    if ord(msvcrt.getch()) == 27:
-	        break
+c = reduce(lambda a, b: a * b, range(1, 6))
+print(a)
+print(c)
