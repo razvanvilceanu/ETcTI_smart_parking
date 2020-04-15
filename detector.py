@@ -13,14 +13,14 @@ def drawRectangle(img, a, b, c, d):
     edges = cv2.Canny(sub_img, 350, 500)
     pix = cv2.countNonZero(edges)
     cv2.imshow('edges', edges)
-    print(pix)
     if pix > 950 or pix < 120:
         cv2.rectangle(img, (a, b), (a + c, b + d), (0, 0, 255), 3)
     else:
         cv2.rectangle(img, (a, b), (a + c, b + d), (0, 255, 0), 3)
 
 
-cap = cv2.VideoCapture(0)
+VIDEO_SOURCE = 0
+cap = cv2.VideoCapture(VIDEO_SOURCE)
 while True:
     ret, frame = cap.read()
     for i in range(len(rois)):

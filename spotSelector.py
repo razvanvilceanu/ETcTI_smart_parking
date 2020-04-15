@@ -1,7 +1,8 @@
 import cv2
 import csv
 
-cap = cv2.VideoCapture(0)
+VIDEO_SOURCE = 0
+cap = cv2.VideoCapture(VIDEO_SOURCE)
 suc, image = cap.read()
 
 cv2.imwrite("frame0.jpg", image)  # save frame as JPEG file
