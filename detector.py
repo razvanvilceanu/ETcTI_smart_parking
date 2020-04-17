@@ -28,7 +28,7 @@ cv2.createTrackbar('Threshold2', 'parameters', 0, 700, callback)
 cv2.createTrackbar('Min pixels', 'parameters', 0, 700, callback)
 cv2.createTrackbar('Max pixels', 'parameters', 0, 700, callback)
 
-# Select the video source; 0 - integrated webcam; 1 - external webcam
+# Select the video source; 0 - integrated webcam; 1 - external webcam;
 pix = 0
 VIDEO_SOURCE = 0
 cap = cv2.VideoCapture(VIDEO_SOURCE)
