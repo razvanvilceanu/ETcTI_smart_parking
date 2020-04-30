@@ -42,10 +42,10 @@ rois = [[int(float(j)) for j in i] for i in rois]
 
 # creating the parameters window with trackbars
 cv2.namedWindow('parameters')
-cv2.createTrackbar('Threshold1', 'parameters', 200, 700, callback)
-cv2.createTrackbar('Threshold2', 'parameters', 200, 700, callback)
-cv2.createTrackbar('Min pixels', 'parameters', 500, 1500, callback)
-cv2.createTrackbar('Max pixels', 'parameters', 500, 1500, callback)
+cv2.createTrackbar('Threshold1', 'parameters', 186, 700, callback)
+cv2.createTrackbar('Threshold2', 'parameters', 122, 700, callback)
+cv2.createTrackbar('Min pixels', 'parameters', 100, 1500, callback)
+cv2.createTrackbar('Max pixels', 'parameters', 323, 1500, callback)
 
 # select the video source; 0 - integrated webcam; 1 - external webcam;
 VIDEO_SOURCE = 0
@@ -72,7 +72,7 @@ while True:
 
     # adding the number of available spots on the shown image
     font = cv2.FONT_HERSHEY_SIMPLEX
-    cv2.putText(frame, str(spots.loc), (560, 70), font, 3, (0, 255, 0), 3)
+    cv2.putText(frame, 'Available spots: ' + str(spots.loc), (10, 30), font, 1, (0, 255, 0), 3)
     cv2.imshow('frame', frame)
 
     # displaying the image with Canny function applied for reference
