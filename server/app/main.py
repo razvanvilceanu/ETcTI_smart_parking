@@ -28,7 +28,6 @@ def genC(video):
         else:
             imageC = cv2.Canny(image, 150, 450, edges=None)
             retC, jpegC = cv2.imencode('.jpg', imageC)
-            jpegC = cv2.resize(jpegC,dsize=0.5)
             frameC = jpegC.tobytes()
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frameC +b'\r\n\r\n')
