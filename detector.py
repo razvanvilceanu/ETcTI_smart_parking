@@ -34,7 +34,7 @@ def callback(foo):
 
 
 # getting the spots coordinates into a list
-with open('data/rois.csv', 'r', newline='') as inf:
+with open('./data/rois.csv', 'r', newline='') as inf:
     csvr = csv.reader(inf)
     rois = list(csvr)
 # converting the values to integer
